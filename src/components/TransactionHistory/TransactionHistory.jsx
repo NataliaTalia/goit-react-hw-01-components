@@ -28,10 +28,11 @@ export default function TransactionHistory({ transactions }) {
 TransactionHistory.propTypes = {
   transactions: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
-      type: PropTypes.string,
-      amount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+        .isRequired,
       currency: PropTypes.string,
-    })
+    }).isRequired
   ),
 };

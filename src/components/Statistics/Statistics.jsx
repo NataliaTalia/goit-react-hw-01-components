@@ -34,6 +34,7 @@ export default function Statistics({ title = 'Upload stats', stats }) {
 Statistics.propTypes = {
   stats: PropTypes.arrayOf(
     PropTypes.shape({
+      title: PropTypes.string,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
     })
